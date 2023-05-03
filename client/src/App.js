@@ -1,42 +1,26 @@
 import React from 'react';
+import Navbar from './components/NavBar/index';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
-import Home from './pages/Home';
-import Matchup from './pages/Matchup';
-import Vote from './pages/Vote';
-import NotFound from './pages/NotFound';
+import About from './components/pages/About';
+import Home from './components/pages/Home';
+import Dash from './components/pages/Dash';
+import Search from './components/pages/Search';
+import Settings from './components/pages/Settings';
 
-const client = new ApolloClient({
-  uri: '/graphql',
-  cache: new InMemoryCache(),
-});
 
 function App() {
   return (
-    <ApolloProvider client={client}>
-      <Router>
-        <div className="flex-column justify-center align-center min-100-vh bg-primary">
-          <Routes>
-            <Route 
-              path="/" 
-              element={<Home />}
-            />
-            <Route 
-              path="/matchup" 
-              element={<Matchup />}
-            />
-            <Route 
-              path="/matchup/:id" 
-              element={<Vote />}
-            />
-            <Route 
-              path="*"
-              element={<NotFound />}
-            />
-          </Routes>
-        </div>
-      </Router>
-    </ApolloProvider>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route path='/' exact element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/dash' element={<Dash />} />
+        <Route path='/search' element={<Search />} />
+        <Route path='/settings' element={<Settings />} />
+      </Routes>
+
+    </Router>
   );
 }
 
