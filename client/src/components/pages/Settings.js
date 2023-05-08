@@ -5,12 +5,20 @@ const Settings = () => {
     <div
       style={{
         display: 'flex',
-        justifyContent: 'Center',
-        alignItems: 'Right',
+        justifyContent: '',
+        alignItems: 'right',
         height: '100vh'
       }}
     >
-      <h1>Settings</h1>
+      <section style={{}}>
+      <h1 style={{ padding: "10px 20px", textAlign: "left", color: "black" }}>
+        Settings
+      </h1>
+      </section>
+      
+      <section style={{ }}>
+      
+      </section>
     </div>
   );
 };
