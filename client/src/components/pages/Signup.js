@@ -39,10 +39,10 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+    
+      <div className="flex justify-center pt-20">
+        <div className="w-96 p-6 shadow-lg rounded-md">
+          <h4 className="card-header bg-dark text-light p-2 pb-5">Sign Up</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -52,15 +52,15 @@ const Signup = () => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
-                  className="form-input"
-                  placeholder="Your username"
+                  className="form-input form-input pb-5 border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
+                  placeholder="Desired username"
                   name="username"
                   type="text"
                   value={formState.name}
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
+                  className="form-input form-input pb-5 border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
                   placeholder="******"
                   name="password"
                   type="password"
@@ -68,7 +68,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
+                  className="btn btn-block btn-primary pt-5"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
@@ -85,7 +85,6 @@ const Signup = () => {
           </div>
         </div>
       </div>
-    </main>
   );
 };
 

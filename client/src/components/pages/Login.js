@@ -67,6 +67,7 @@ const Login = (props) => {
                   placeholder="Your password"
                   name="password"
                   type="password"
+                  id="password"
                   value={formState.password}
                   onChange={handleChange}
                 />
