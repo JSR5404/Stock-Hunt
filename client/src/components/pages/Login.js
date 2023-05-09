@@ -41,11 +41,11 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Login</h4>
-          <div className="card-body">
+    
+      <div className="flex justify-center pt-20">
+        <div className ="w-96 p-6 shadow-lg rounded-md">
+          <h4 className="pb-5">Login</h4>
+          <div>
             {data ? (
               <p>
                 Success! You may now head{' '}
@@ -54,23 +54,24 @@ const Login = (props) => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
-                  className="form-input"
+                  className="form-input pb-5 border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
                   placeholder="Your username"
                   name="username"
                   type="username"
+                  id="username"
                   value={formState.username}
                   onChange={handleChange}
                 />
                 <input
-                  className="form-input"
-                  placeholder="******"
+                  className="form-input pb-5 border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600"
+                  placeholder="Your password"
                   name="password"
                   type="password"
                   value={formState.password}
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-primary"
+                className="block text-base mb-2 pt-5"
                   style={{ cursor: 'pointer' }}
                   type="submit"
                 >
@@ -87,7 +88,6 @@ const Login = (props) => {
           </div>
         </div>
       </div>
-    </main>
   );
 };
 
