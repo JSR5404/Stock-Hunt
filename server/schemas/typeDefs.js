@@ -12,11 +12,6 @@ const typeDefs = gql`
     user: User
   }
 
-  type Query {
-    tech: [Tech]
-    matchups(_id: String): [Matchup]
-  }
-
   type Mutation {
     addUser(
       username: String!
