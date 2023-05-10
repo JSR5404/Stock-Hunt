@@ -1,4 +1,3 @@
-const Tech = require('./Tech');
 const User = require('./User');
 
-module.exports = { Tech, User };
+module.exports = { User };
