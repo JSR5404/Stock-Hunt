@@ -21,6 +21,7 @@ const Navbar = () => {
 
     <NavMenu>
     {Auth.loggedIn() ? (
+      
       <>
       <NavLink to='/' activestyle = "true">
         Home
@@ -41,6 +42,7 @@ const Navbar = () => {
         Logout
       </button>
       </>
+      
     ) : (
       <>
       <NavLink to='/' activestyle = "true">

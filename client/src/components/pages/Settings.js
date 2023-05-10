@@ -10,15 +10,11 @@ const Settings = () => {
         height: '100vh'
       }}
     >
-      <section style={{}}>
-      <h1 style={{ padding: "10px 20px", textAlign: "left", color: "black" }}>
+      <section>
+      <h1 className="font-serif">
         Settings
       </h1>
-      </section>
-      
-      <section style={{ }}>
-      
-      </section>
+      </section>   
     </div>
   );
 };

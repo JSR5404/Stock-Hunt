@@ -17,7 +17,7 @@ const About = () => {
         <a href="https://github.com/JSR5404/Stock-Hunt">
           <img src="./github.png" alt="stockhunt-github" style={{ width: '50%', height: '30%', }} />
         </a>
-        <h4>⇧ Click here for Stock Hunt Github ⇧</h4>
+        <h4 class="text-red-700">⇧ Click here for Stock Hunt Github ⇧</h4>
       </div>
       <div>
         <a href="https://github.com/cchloe928">
