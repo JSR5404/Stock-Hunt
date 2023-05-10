@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Toggle from '../Toggle'
 const Settings = () => {
   return (
     <div
@@ -14,6 +15,8 @@ const Settings = () => {
       <h1 className="font-serif">
         Settings
       </h1>
+      <br></br>
+      <Toggle/>
       </section>   
     </div>
   );
