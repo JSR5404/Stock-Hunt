@@ -6,7 +6,7 @@ const Settings = () => {
     <div
       style={{
         display: 'flex',
-        justifyContent: '',
+        justifyContent: 'center',
         alignItems: 'right',
         height: '100vh'
       }}
