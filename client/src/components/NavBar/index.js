@@ -54,9 +54,6 @@ const Navbar = () => {
       <NavLink to='/about' activestyle  = "true">
         About
       </NavLink>
-      <NavLink to='/search' activestyle  = "true">
-        Search Stocks
-      </NavLink>
       <NavLink to='/settings' activestyle  = "true">
         Settings
       </NavLink>
