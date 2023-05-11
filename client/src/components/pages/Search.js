@@ -48,6 +48,7 @@ const Search = () => {
         <SearchResults results={bestMatches} />
       ) : null}
     </div>
+
   );
 };
 
