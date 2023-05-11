@@ -2,7 +2,6 @@
   "name": "stockhunt",
   "version": "0.1.0",
   "private": false,
-  "main": "server/server.js",
   "scripts": {
     "start": "node server --ignore client",
     "develop": "concurrently \"cd server && npm run start\" \"cd client && npm start\"",
