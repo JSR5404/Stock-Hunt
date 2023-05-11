@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './components/NavBar/index';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './components/pages/About';
@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Dash from './components/pages/Dash';
 import Search from './components/pages/Search';
 import Settings from './components/pages/Settings';
+import {keepTheme} from './utils/themes';
 import Login from './components/pages/Login';
 import Signup from './components/pages/Signup';
 import {
@@ -42,6 +43,7 @@ const client = new ApolloClient({
 });
 
 function App() {
+  useEffect(()=>keepTheme())
   return (
     <ApolloProvider client={client}>
     <Router>
