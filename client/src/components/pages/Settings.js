@@ -1,11 +1,12 @@
 import React from 'react';
+import Toggle from '../Toggle';
 
 const Settings = () => {
   return (
-    <div
+    <div className='pt-12'
       style={{
         display: 'flex',
-        justifyContent: '',
+        justifyContent: 'center',
         alignItems: 'right',
         height: '100vh'
       }}
@@ -14,6 +15,8 @@ const Settings = () => {
       <h1 className="font-serif">
         Settings
       </h1>
+      <br></br>
+      <Toggle/>
       </section>   
     </div>
   );
