@@ -21,8 +21,18 @@ const typeDefs = gql`
   }
 
   type Query {
+    getStock: [Stock]
     users: [User]
     user(username: String!): User
+  }
+
+  type Stock {
+    _id: ID
+    ticker: String
+    position: String
+    quantity: Int
+    price: Float
+
   }
 `;
 

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './components/NavBar/index';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './components/pages/About';
@@ -16,6 +16,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -43,6 +44,9 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [stocks, setStocks] = useState([]);
+  const [isPortfolioReady, setIsPortfolioReady] = useState(false);
+
   useEffect(()=>keepTheme())
   return (
     <ApolloProvider client={client}>
@@ -51,7 +55,30 @@ function App() {
       <Routes>
         <Route path='/' exact element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/dash' element={<Dash />} />
+        <Route path='/dash' element={!isPortfolioReady ? (
+                    <div className='portfolio-configuration'>
+                        <Dash stocks={stocks} setStocks={setStocks} />
+                        <div className='portfolio-button-continue-wrapper'>
+                            <button
+                                className='portfolio-button-continue'
+                                onClick={() => setIsPortfolioReady(true)}
+                            >
+                                <span>Continue</span>
+                            </button>
+                        </div>
+                    </div>
+                ) : (
+                    <div className='portfolio-monitor'>
+                        <div className='portfolio-button-back-wrapper'>
+                            <button
+                                className='portfolio-button-back'
+                                onClick={() => setIsPortfolioReady(false)}
+                            >
+                                <span>Go back to Portfolio</span>
+                            </button>
+                        </div>
+                        </div>
+                )} />
         <Route path='/search' element={<Search />} />
         <Route path='/settings' element={<Settings />} />
         <Route path='/login' element={<Login />} />
