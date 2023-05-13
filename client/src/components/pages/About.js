@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "./about.css"
 const About = () => {
   return (
     <div
@@ -8,42 +8,50 @@ const About = () => {
         // justifyContent: 'Center',
         // alignItems: 'Right',
         // height: '100vh'
+
       }}
     >
-      <h1>About Stock Hunt</h1>
-      <h4>This website is for you to track your own stocks! </h4>
+      <div class="members" align="center">
+        <h1>About Stock Hunt</h1>
+        <h4>This website is for you to track your own stocks! </h4>
+        <div class="container">
+          <img src="./github.png" alt="img" class="image"></img>
+          <div class="overlay overlayCross">
+            <a href="https://github.com/JSR5404/Stock-Hunt">Stock Hunt</a>
 
-      <div>
-        <a href="https://github.com/JSR5404/Stock-Hunt">
-          <img src="./github.png" alt="stockhunt-github" style={{ width: '50%', height: '30%', }} />
-        </a>
-        <h4 class="text-red-700">⇧ Click here for Stock Hunt Github ⇧</h4>
-      </div>
-      <div>
-        <a href="https://github.com/cchloe928">
-          <img src="./github-mint.png" alt="chloe-github" style={{ width: '20%', height: '30%', }} />
-        </a>
-        <h4>Chloe Choi</h4>
-      </div>
-      <div>
-        <a href="https://github.com/skullkid4200">
-          <img src="./github-blue.png" alt="skullkid-github" style={{ width: '20%', height: '30%', }} />
-        </a>
-        <h4>Jack Einhorn</h4>
-      </div>
-      <div>
-        <a href="https://github.com/JSR5404">
-          <img src="./github-orange.png" alt="JSR-github" style={{ width: '20%', height: '30%', }} />
-        </a>
-        <h4>Joshua Ricefield</h4>
-      </div>
-      <div>
-        <a href="https://github.com/Pvon11">
-          <img src="./github-red.png" alt="pvon-github" style={{ width: '20%', height: '30%', }} />
-        </a>
-        <h4>Patrick Vona</h4>
+          </div>
+        </div>
       </div>
 
+      <div align="center">
+        <div class="container">
+          <img src="./github-mint.png" alt="img" class="image"></img>
+          <div class="overlay overlayRight">
+            <a href="https://github.com/cchloe928">Chloe Choi</a>
+          </div>
+        </div>
+
+        <div class="container">
+          <img src="./github-blue.png" alt="img" class="image"></img>
+          <div class="overlay overlayRight">
+            <a href="https://github.com/skullkid4200">Jack Einhorn</a>
+          </div>
+        </div>
+
+        <div class="container">
+          <img src="./github-orange.png" alt="img" class="image"></img>
+          <div class="overlay overlayRight">
+            <a href="https://github.com/JSR5404">Joshua Ricefield</a>
+          </div>
+        </div>
+
+        <div class="container">
+          <img src="./github-red.png" alt="img" class="image"></img>
+          <div class="overlay overlayRight">
+            <a href="https://github.com/Pvon11">Patrick Vona</a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
