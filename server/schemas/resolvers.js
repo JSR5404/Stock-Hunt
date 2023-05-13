@@ -5,13 +5,11 @@ const { Stock } = require('../models');
 
 const resolvers = {
 
-  Query: {
-
-    getStock: async () => { return Stock.find({}) }
-
-  },
 
   Mutation: {
+
+    getStock: async () => { return Stock.find({}) },
+
     addUser: async (parent, { username, password }) => {
       const user = await User.create({ username, password });
       const token = signToken(user);

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import DATABASE from '../../utils/database';
-import { GET_STOCK } from '../../utils/queries';
-import { useQuery } from "@apollo/client";
+import { GET_STOCK } from '../../utils/mutations';
+import { useMutation } from "@apollo/client";
 
 export default function Dash({ stocks, setStocks }) {
 
-    const getStock = useQuery(GET_STOCK)
+    const getStock = useMutation(GET_STOCK)
 
     useEffect(() => {
         //GET request to the database to fetch the stock which are already in our portfolio
@@ -73,21 +73,21 @@ export default function Dash({ stocks, setStocks }) {
                 <div className='portfolio-main-row'>Price</div>
             </div>
             {/* For each stock in database renders a row with info */}
-            {stocks.map((s) => {
+            {stocks.map((stock) => {
                 return (
-                    <div className='portfolio-row-wrapper' key={getStock.id}>
-                        <div className='portfolio-row'>{getStock.ticker}</div>
-                        <div className='portfolio-row'>{getStock.position}</div>
-                        <div className='portfolio-row'>{getStock.quantity}</div>
-                        <div className='portfolio-row'>{getStock.price}</div>
+                    <div className='portfolio-row-wrapper'key={stock.id}>
+                        <div className='portfolio-row'>{stock.ticker}</div>
+                        <div className='portfolio-row'>{stock.position}</div>
+                        <div className='portfolio-row'>{stock.quantity}</div>
+                        <div className='portfolio-row'>{stock.price}</div>
                         <button
                             className='remove-stock-button'
-                            onClick={() => handleRemoveStock(s.id)}
+                            onClick={() => handleRemoveStock(stock.id)}
                         >
                             <span>-</span>
                         </button>
                     </div>
-                );
+            );    
             })}
         </div>
     );

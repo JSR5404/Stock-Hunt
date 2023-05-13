@@ -13,6 +13,7 @@ const typeDefs = gql`
   }
 
   type Mutation {
+    getStock: [Stock]
     addUser(
       username: String!
       password: String!
@@ -21,7 +22,6 @@ const typeDefs = gql`
   }
 
   type Query {
-    getStock: [Stock]
     users: [User]
     user(username: String!): User
   }
