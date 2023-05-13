@@ -39,3 +39,15 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const GET_STOCK = gql`
+    mutation GetStock($stock: String) {
+        getStock {
+            _id
+            ticker
+            position
+            quantity
+            price
+        }
+    }
+`;

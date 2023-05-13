@@ -9,14 +9,3 @@ export const GET_USER = gql`
         }
     }
 `;
-
-export const GET_STOCK = gql`
-    query GetStock($stock: String) {
-        getStock {
-            ticker
-            position
-            quantity
-            price
-        }
-    }
-`;
