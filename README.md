@@ -47,11 +47,11 @@ Testing not provided at this time.
 
 Jack Einhorn [GitHub](https://github.com/skullkid4200), [jackeinhorn123@gmail.com](mailto:jackeinhorn123@gmail.com)
 
-Joshua Ricefield [GitHub](https://github.com/JoshEflin), [eflinjh@gmail.com](mailto:eflinjh@gmail.com)
+Joshua Ricefield [GitHub](https://github.com/JSR5404)
 
-Patrick Vona [GitHub](https://github.com/miacias), [miaciasullo@gmail.com](mailto:miaciasullo@gmail.com)
+Patrick Vona [GitHub](https://github.com/Pvon11)
 
-Chloe  [GitHub](https://github.com/OConnell-Coder), [oconnellcoder@gmail.com](mailto:oconnellcoder@gmail.com)
+Chloe [GitHub](https://github.com/cchloe928)
 
 
 ## Credits
