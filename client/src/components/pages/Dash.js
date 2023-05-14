@@ -66,16 +66,16 @@ export default function Dash({ stocks, setStocks }) {
 
     return (
         <div className='portfolio-page'>
-            <div className='portfolio-main-row-wrapper'>
-                <div className='portfolio-main-row'>Ticker</div>
-                <div className='portfolio-main-row'>Position</div>
-                <div className='portfolio-main-row'>Quantity</div>
-                <div className='portfolio-main-row'>Price</div>
+            <div className='portfolio-main-row-wrapper flex justify-center'>
+                <div className='portfolio-main-row p-5'>Ticker</div>
+                <div className='portfolio-main-row p-5'>Position</div>
+                <div className='portfolio-main-row p-5'>Quantity</div>
+                <div className='portfolio-main-row p-5'>Price</div>
             </div>
             {/* For each stock in database renders a row with info */}
             {stocks.map((stock) => {
                 return (
-                    <div className='portfolio-row-wrapper'key={stock.id}>
+                    <div className='portfolio-row-wrapper flex justify-center'key={stock.id}>
                         <div className='portfolio-row'>{stock.ticker}</div>
                         <div className='portfolio-row'>{stock.position}</div>
                         <div className='portfolio-row'>{stock.quantity}</div>
