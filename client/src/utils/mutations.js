@@ -41,8 +41,8 @@ export const ADD_USER = gql`
 `;
 
 export const GET_STOCK = gql`
-    mutation GetStock($stock: String) {
-        getStock {
+    mutation getStock($stock: String) {
+        getStock(stock:$stock) {
             _id
             ticker
             position

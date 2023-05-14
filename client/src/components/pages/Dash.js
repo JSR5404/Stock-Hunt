@@ -1,39 +1,40 @@
 import React, { useState, useEffect } from 'react';
 import DATABASE from '../../utils/database';
-import { GET_STOCK } from '../../utils/mutations';
-import { useMutation } from "@apollo/client";
+import { GET_STOCK } from '../../utils/queries';
+import { useQuery } from "@apollo/client";
 
 export default function Dash({ stocks, setStocks }) {
 
-    const getStock = useMutation(GET_STOCK)
+    const {loading, error, data} = useQuery(GET_STOCK)    
 
-    useEffect(() => {
+    useEffect(() => { 
+        
         //GET request to the database to fetch the stock which are already in our portfolio
         const fetchData = async () => {
             try {
-
-
-                console.log(getStock);
+                if (loading) console.log("loading")
+                if (error) console.log("error")
+                console.log(data.getStock);
                 //Validates that the database is not empty
-                if (getStock && typeof getStock === "object" && !Array.isArray(getStock)) {
+                // if (getStock && typeof getStock === "object" && !Array.isArray(getStock)) {
 
-                    //If not empty modifies the data with fetched results and updates state
-                    const dataModified = Object.values(getStock).map((stock) => ({
-                        id: stock?.id || "",
-                        ticker: stock?.ticker || "",
-                        position: stock?.position || "",
-                        quantity: stock?.quantity || "",
-                        price: stock?.price || "",
-                    }));
-                    setStocks(dataModified);
-                }
-                else if (Array.isArray(getStock)) {
-                    setStocks(getStock)
-                }
+                //     //If not empty modifies the data with fetched results and updates state
+                //     const dataModified = Object.values(getStock).map((stock) => ({
+                //         id: stock?.id || "",
+                //         ticker: stock?.ticker || "",
+                //         position: stock?.position || "",
+                //         quantity: stock?.quantity || "",
+                //         price: stock?.price || "",
+                //     }));
+                //     setStocks(dataModified);
+                // }
+                // else if (Array.isArray(getStock)) {
+                //     setStocks(getStock)
+                // }
 
-                else {
-                    setStocks([])
-                }
+                // else {
+                //     setStocks([])
+                // }
 
 
             } catch (error) {
