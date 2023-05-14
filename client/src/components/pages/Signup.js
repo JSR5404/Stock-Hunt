@@ -39,7 +39,7 @@ const Signup = () => {
   return (
 
     <div className="flex justify-center pt-20">
-      <div className="w-96 p-6 shadow-lg rounded-md">
+      <div className="w-96 p-6 shadow-lg rounded-md bg-gray-900">
         <h4 className="card-header bg-dark text-light p-2 pb-5">Sign Up</h4>
         <div className="card-body">
           {data ? (
