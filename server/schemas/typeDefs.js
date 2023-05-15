@@ -12,7 +12,17 @@ const typeDefs = gql`
     user: User
   }
 
+  type Stock {
+    _id: ID
+    ticker: String
+    position: String
+    quantity: Int
+    price: Float
+
+  }
+
   type Mutation {
+    getStock: [Stock]
     addUser(
       username: String!
       password: String!
@@ -26,14 +36,7 @@ const typeDefs = gql`
     user(username: String!): User
   }
 
-  type Stock {
-    _id: ID
-    ticker: String
-    position: String
-    quantity: Int
-    price: Float
-
-  }
+ 
 `;
 
 module.exports = typeDefs;

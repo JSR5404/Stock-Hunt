@@ -11,8 +11,9 @@ export const GET_USER = gql`
 `;
 
 export const GET_STOCK = gql`
-    query GetStock($stock: String) {
+    query getStock {
         getStock {
+            _id
             ticker
             position
             quantity

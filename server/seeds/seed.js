@@ -14,6 +14,13 @@ db.once('open', async () => {
         quantity: 500,
         price: 2.99,
       },
+
+      {
+        ticker: 'APPL',
+        position: 'Great!',
+        quantity: 234,
+        price: 11.99,
+      }
       ]).then((result) => console.log(result));
       
       

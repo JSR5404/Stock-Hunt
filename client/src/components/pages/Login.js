@@ -42,8 +42,8 @@ const Login = (props) => {
 
   return (
     
-      <div className="flex justify-center pt-20">
-        <div className ="w-96 p-6 shadow-lg rounded-md">
+      <div className="flex justify-center pt-20 ">
+        <div className ="w-96 p-6 shadow-lg rounded-md bg-gray-900">
           <h4 className="pb-5">Login</h4>
           <div>
             {data ? (
