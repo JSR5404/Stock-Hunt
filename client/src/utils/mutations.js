@@ -51,3 +51,19 @@ export const GET_STOCK = gql`
         }
     }
 `;
+
+export const ADD_STOCK = gql`
+  mutation addStock($ticker: String!, $position: String!, $quantity: Int!, $price: Float!) {
+    addStock(ticker: $ticker, position: $position, quantity: $quantity, price: $price) {
+      stock {
+        _id
+        ticker
+        position
+        quantity
+        price
+      }
+    }
+  }
+`;
+
+
