@@ -20,7 +20,7 @@ Users will make an account through which to log in and out of the app with, and 
 
 ## Installation
 
-N/A. [Deployed site here!]()
+N/A. [Deployed site here!](https://tranquil-retreat-75935.herokuapp.com/)
 
 
 ## Usage
@@ -91,7 +91,7 @@ U. Penn Bootcamp instructor(s):
 
 Assistance from classmate(s):
 
--[Alexander Weiss](https://github.com/alexander1262)
+- [Alexander Weiss](https://github.com/alexander1262)
 
 Tutor(s):
 - Sachin Jhaveri 
