@@ -63,12 +63,12 @@ function App() {
                   <div className="portfolio-configuration">
                     <Dash stocks={stocks} setStocks={setStocks} />
                     <div className="portfolio-button-continue-wrapper">
-                      <button
+                      {/* <button
                         className="portfolio-button-continue"
                         onClick={() => setIsPortfolioReady(true)}
                       >
                         <span>Continue</span>
-                      </button>
+                      </button> */}
                     </div>
                   </div>
                 ) : (

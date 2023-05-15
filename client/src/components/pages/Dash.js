@@ -17,7 +17,7 @@ export default function Dash({ stocks, setStocks }) {
                 if (error) console.log("error")
                 console.log(data.getStock);
 
-                
+
                 if (!loading && data) {
 
                     //If not empty modifies the data with fetched results and updates state
@@ -31,8 +31,8 @@ export default function Dash({ stocks, setStocks }) {
                         price: stock?.price || "",
                     }));
                     setStocks(dataModified);
-                } 
- 
+                }
+
             } catch (error) {
                 /*The option how to handle the error is totally up to you. 
                 Ideally, you can send notification to the user */
@@ -44,45 +44,45 @@ export default function Dash({ stocks, setStocks }) {
     }, [data, loading, error, setStocks]);
 
     //Function that removes the stock from portfolio
-    const handleRemoveStock = async (stockId) => {
-        try {
-            //DELETE request to the database to delete specific stock by id
-            await fetch(`https://${DATABASE}/${stockId}.json`, {
-                method: 'DELETE',
-                'Content-Type': 'application/json',
-            });
+    // const handleRemoveStock = async (stockId) => {
+    //     try {
+    //         //DELETE request to the database to delete specific stock by id
+    //         await fetch(`https://${DATABASE}/${stockId}.json`, {
+    //             method: 'DELETE',
+    //             'Content-Type': 'application/json',
+    //         });
 
-            //Updates state by removing this stock
-            setStocks((stocks) => stocks.filter((s) => s.id !== stockId));
-        } catch (error) {
-            /*The option how to handle the error is totally up to you. 
-            Ideally, you can send notification to the user */
-            console.log(error);
-        }
-    };
+    //         //Updates state by removing this stock
+    //         setStocks((stocks) => stocks.filter((s) => s.id !== stockId));
+    //     } catch (error) {
+    //         /*The option how to handle the error is totally up to you. 
+    //         Ideally, you can send notification to the user */
+    //         console.log(error);
+    //     }
+    // };
 
     return (
         <div className='portfolio-page'>
-            <div className='portfolio-main-row-wrapper flex justify-center'>
-                <div className='portfolio-main-row p-5'>Ticker</div>
-                <div className='portfolio-main-row p-5'>Position</div>
-                <div className='portfolio-main-row p-5'>Quantity</div>
-                <div className='portfolio-main-row p-5'>Price</div>
+            <div className='portfolio-main-row-wrapper flex justify-center bg-gray-900'>
+                <div className='portfolio-main-row p-5 text-2xl'>Ticker</div>
+                <div className='portfolio-main-row p-5 text-2xl'>Position</div>
+                <div className='portfolio-main-row p-5 text-2xl'>Quantity</div>
+                <div className='portfolio-main-row p-5 text-2xl'>Price</div>
             </div>
             {/* For each stock in database renders a row with info */}
             {stocks.map((stock) => {
                 return (
                     <div className='portfolio-row-wrapper flex justify-center' key={stock.id}>
-                        <div className='portfolio-row p-8'>{stock.ticker}</div>
-                        <div className='portfolio-row p-8'>{stock.position}</div>
-                        <div className='portfolio-row p-8'>{stock.quantity}</div>
-                        <div className='portfolio-row p-8'>{stock.price}</div>
-                        <button
+                        <div className='portfolio-row p-8 px-10'>{stock.ticker}</div>
+                        <div className='portfolio-row p-8 px-10'>{stock.position}</div>
+                        <div className='portfolio-row p-8 px-10'>{stock.quantity}</div>
+                        <div className='portfolio-row p-8 px-10'>{stock.price}</div>
+                        {/* <button
                             className='remove-stock-button'
                             onClick={() => handleRemoveStock(stock.id)}
                         >
                             <span>-</span>
-                        </button>
+                        </button> */}
                     </div>
                 );
             })}
