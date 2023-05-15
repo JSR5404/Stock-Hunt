@@ -28,24 +28,26 @@ const Search = () => {
   };
 
   return (
-    <div className="flex bg-black">
-      <input
-        type="text"
-        value={input}
-        className="w-full px-4 py-2 focus:outline-none rounded-md"
-        placeholder="Search stock..."
-        onChange={(event) => setInput(event.target.value)}
-        onKeyPress={(event) => {
-          if (event.key === "Enter") {
-            updateBestMatches();
-          }
-        }}
-      />
-      {input && <button onClick={clear} className="m-1"></button>}
-      <button
-        onClick={updateBestMatches}
-        className="h-8 w-8 bg-indigo-600 rounded-md flex justify-center items-center m-1 p-2 transition duration-300 hover:ring-2 ring-indigo-400"
-      ></button>
+    <div className="flex flex-col">
+      <div className="flex row my-5">
+        <input
+          type="text"
+          value={input}
+          className="w-full px-4 py-2 rounded-md text-lg"
+          placeholder="Search stock"
+          onChange={(event) => setInput(event.target.value)}
+          onKeyPress={(event) => {
+            if (event.key === "Enter") {
+              updateBestMatches();
+            }
+          }}
+        />
+        {input && <button onClick={clear} className="m-1"></button>}
+        <button
+          onClick={updateBestMatches}
+          className="h-8 w-8 bg-orange-600 rounded-md flex justify-center items-center m-1"
+        ></button>
+      </div>
       {input && bestMatches.length > 0 ? (
         <SearchResults results={bestMatches} input={input} />
       ) : null}
