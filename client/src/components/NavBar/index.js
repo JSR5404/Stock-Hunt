@@ -48,9 +48,6 @@ const Navbar = () => {
       <NavLink to='/' activestyle = "true">
         Home
       </NavLink>
-      <NavLink to='/dash' activestyle  = "true">
-        My Dash
-      </NavLink>
       <NavLink to='/about' activestyle  = "true">
         About
       </NavLink>
