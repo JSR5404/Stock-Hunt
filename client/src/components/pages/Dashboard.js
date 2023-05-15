@@ -40,7 +40,7 @@ const Dashboard = () => {
   }, [stockSymbol]);
 
   return (
-    <div className="">
+    <div>
       <Header name={stockDetails.name} />
       <div>
         <Overview

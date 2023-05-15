@@ -53,7 +53,6 @@ function App() {
       <Router>
         <StockContext.Provider value={{ stockSymbol, setStockSymbol }}>
           <Navbar />
-          {/* <Dashboard /> */}
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -91,7 +90,6 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>
-          
         </StockContext.Provider>
       </Router>
     </ApolloProvider>
