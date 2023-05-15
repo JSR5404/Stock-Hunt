@@ -11,6 +11,19 @@
   height: 200;
 }
 
+.column {
+  float: left;
+  width: 20%;
+  padding: 10;
+
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .overlay {
   position: absolute;
   transition: all .3s ease;

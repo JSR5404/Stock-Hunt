@@ -23,36 +23,49 @@ const About = () => {
         </div>
       </div>
 
-      <div align="center">
+      <div align="row">
+<div class="column">
         <div class="container">
           <img src="./github-mint.png" alt="img" class="image"></img>
           <div class="overlay overlayRight">
             <a href="https://github.com/cchloe928">Chloe Choi</a>
           </div>
         </div>
+        </div>
+        <div class="column">
 
         <div class="container">
+
           <img src="./github-blue.png" alt="img" class="image"></img>
           <div class="overlay overlayRight">
             <a href="https://github.com/skullkid4200">Jack Einhorn</a>
           </div>
         </div>
+        </div>
+        <div class="column">
+
 
         <div class="container">
+
           <img src="./github-orange.png" alt="img" class="image"></img>
           <div class="overlay overlayRight">
             <a href="https://github.com/JSR5404">Joshua Ricefield</a>
           </div>
         </div>
+</div>
+<div class="column">
 
         <div class="container">
+
           <img src="./github-red.png" alt="img" class="image"></img>
           <div class="overlay overlayRight">
             <a href="https://github.com/Pvon11">Patrick Vona</a>
           </div>
         </div>
+        </div>
+        </div>
       </div>
-    </div>
+  
   );
 };
 
