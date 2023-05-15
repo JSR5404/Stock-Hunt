@@ -8,7 +8,7 @@ const SearchResults = ({ results, input }) => {
   console.log(results);
   console.log("input", input);
   return (
-    <ul className="absolute top-12 border-2 w-full rounded-md h-64 overflow-y-scroll">
+    <ul className="border-2 w-full rounded-md h-64 overflow-y-scroll sticky-bottom p-5">
       {results.map((item) => {
         return (
           <li
