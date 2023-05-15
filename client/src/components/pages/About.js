@@ -36,7 +36,7 @@ const About = () => {
 
         <div class="container">
 
-          <img src="./github-blue.png" alt="img" class="image"></img>
+          <img src="./github-yellow.png" alt="img" class="image"></img>
           <div class="overlay overlayRight">
             <a href="https://github.com/skullkid4200">Jack Einhorn</a>
           </div>
@@ -47,7 +47,7 @@ const About = () => {
 
         <div class="container">
 
-          <img src="./github-orange.png" alt="img" class="image"></img>
+          <img src="./github-purple.png" alt="img" class="image"></img>
           <div class="overlay overlayRight">
             <a href="https://github.com/JSR5404">Joshua Ricefield</a>
           </div>
