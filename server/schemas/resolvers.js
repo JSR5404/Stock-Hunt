@@ -5,10 +5,21 @@ const { Stock } = require('../models');
 
 const resolvers = {
 
+  Query: {
+
+    getStock: async () => {
+      try {
+        let allStocks = await Stock.find()
+        console.log(allStocks);
+        return allStocks
+      } catch (error){
+        console.log(error);
+      }
+     },
+
+  },
 
   Mutation: {
-
-    getStock: async () => { return Stock.find({}) },
 
     addUser: async (parent, { username, password }) => {
       const user = await User.create({ username, password });
@@ -16,6 +27,7 @@ const resolvers = {
       return { token, user };
     },
     login: async (parent, { username, password }) => {
+      console.log(username, password);
       const user = await User.findOne({ username });
 
       if (!user) {
