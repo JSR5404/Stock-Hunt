@@ -11,7 +11,9 @@ const Search = () => {
     try {
       if (input) {
         const searchResults = await searchSymbol(input);
-        const result = searchResults.result;
+        const result = searchResults.result.filter(
+          (item) => !item.symbol.includes(".")
+        );
         setBestMatches(result);
       }
     } catch (error) {
@@ -45,10 +47,9 @@ const Search = () => {
         className="h-8 w-8 bg-indigo-600 rounded-md flex justify-center items-center m-1 p-2 transition duration-300 hover:ring-2 ring-indigo-400"
       ></button>
       {input && bestMatches.length > 0 ? (
-        <SearchResults results={bestMatches} />
+        <SearchResults results={bestMatches} input={input} />
       ) : null}
     </div>
-
   );
 };
 
