@@ -23,6 +23,7 @@ const typeDefs = gql`
 
   type Mutation {
     getStock: [Stock]
+    addStock(ticker: String!, position: String!, quantity: Int!, price: Float!): Auth
     addUser(
       username: String!
       password: String!

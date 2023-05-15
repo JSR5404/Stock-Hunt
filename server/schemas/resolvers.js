@@ -26,6 +26,10 @@ const resolvers = {
       const token = signToken(user);
       return { token, user };
     },
+    addStock: async (parent, { ticker, position, quantity, price }) => {
+      const stock = await Stock.create({ ticker, position, quantity, price });
+      return { stock };
+    },
     login: async (parent, { username, password }) => {
       console.log(username, password);
       const user = await User.findOne({ username });
