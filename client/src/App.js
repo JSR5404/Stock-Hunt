@@ -86,12 +86,12 @@ function App() {
                 )
               }
             />
-            <Route path="/search" element={<Search />} />
+            <Route path="/search" element={<Dashboard />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
           </Routes>
-          <Dashboard />
+          
         </StockContext.Provider>
       </Router>
     </ApolloProvider>
