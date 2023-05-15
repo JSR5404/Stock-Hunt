@@ -51,7 +51,7 @@ Joshua Ricefield [GitHub](https://github.com/JSR5404)
 
 Patrick Vona [GitHub](https://github.com/Pvon11)
 
-Chloe [GitHub](https://github.com/cchloe928)
+Chloe Choi [GitHub](https://github.com/cchloe928)
 
 
 ## Credits
@@ -94,9 +94,8 @@ Assistance from classmate(s):
 -[Alexander Weiss](https://github.com/alexander1262)
 
 Tutor(s):
-- 
-- 
-- 
+- Sachin Jhaveri 
+- Rene Trevino
 
 
 ## License
